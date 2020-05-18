@@ -8,7 +8,7 @@ export default class Demo extends Component {
   render() {
     return (
       <div>
-        <h1>foodcost-react Demo</h1>
+        <h1>nwb-boilerplate Demo</h1>
         <ExampleComp />
       </div>
     );

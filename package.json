@@ -1,7 +1,7 @@
 {
-  "name": "foodcost-react",
+  "name": "nwb-boilerplate",
   "version": "1.0.0",
-  "description": "foodcost-react React component",
+  "description": "nwb-boilerplate React component",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [

@@ -4,7 +4,7 @@ module.exports = (args) => {
     npm: {
       esModules: true,
       umd: {
-        global: 'FoodcostReact',
+        global: 'NWBBoilerplate',
         externals: {
           react: 'React',
         },
