@@ -1,1 +1,5 @@
-export {ExampleComp} from './comp';
+import {ExampleComp} from './comp';
+
+export default {
+  ExampleComp,
+};

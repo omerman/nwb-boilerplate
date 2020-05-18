@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
-import {ExampleComp} from '../../src';
+import Components from '../../src/index';
+
+const {ExampleComp} = Components;
 
 export default class Demo extends Component {
   render() {
