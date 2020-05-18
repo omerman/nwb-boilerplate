@@ -19,7 +19,12 @@ module.exports = (args, command) => {
           extensions: ['.ts', '.tsx', '.js', '.jsx'],
         },
         module: {
-          rules: [{test: /\.tsx$/, loader: 'ts-loader'}],
+          rules: [{test: /\.tsx$/, loader: 'ts-loader'}, {
+            test: /\.(ts|tsx)$/,
+            enforce: 'pre',
+            loader: 'eslint-loader',
+            exclude: /node_modules/
+          }],
         },
       },
     }
