@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
 
-import Example from '../../src'
+import {ExampleComp} from '../../src'
 
 export default class Demo extends Component {
   render() {
     return <div>
       <h1>foodcost-react Demo</h1>
-      <Example/>
+      <ExampleComp/>
     </div>
   }
 }

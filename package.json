@@ -24,9 +24,15 @@
     "react": "16.x"
   },
   "devDependencies": {
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
     "nwb": "0.24.x",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.9.2"
   },
   "author": "",
   "homepage": "",
