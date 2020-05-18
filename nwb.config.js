@@ -1,4 +1,4 @@
-module.exports = (args, command) => {
+module.exports = (args) => {
   return {
     type: 'react-component',
     npm: {
@@ -6,27 +6,35 @@ module.exports = (args, command) => {
       umd: {
         global: 'FoodcostReact',
         externals: {
-          react: 'React'
-        }
-      }
+          react: 'React',
+        },
+      },
     },
     webpack: {
+      config: (config) => {
+        if (config.mode === 'development') {
+          config.entry = './demo/src/index';
+        } else {
+          config.entry = './src/index';
+        }
+        return config;
+      },
       extra: {
-        entry: {
-          demo: './demo/src/index',
-        },
         resolve: {
           extensions: ['.ts', '.tsx', '.js', '.jsx'],
         },
         module: {
-          rules: [{test: /\.tsx$/, loader: 'ts-loader'}, {
-            test: /\.(ts|tsx)$/,
-            enforce: 'pre',
-            loader: 'eslint-loader',
-            exclude: /node_modules/
-          }],
+          rules: [
+            {test: /\.tsx$/, loader: 'ts-loader'},
+            {
+              test: /\.(ts|tsx)$/,
+              enforce: 'pre',
+              loader: 'eslint-loader',
+              exclude: /node_modules/,
+            },
+          ],
         },
       },
-    }
-  }
+    },
+  };
 };
